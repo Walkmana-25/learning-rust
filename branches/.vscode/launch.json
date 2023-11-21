@@ -1,0 +1,45 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'branches'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=branches",
+                    "--package=branches"
+                ],
+                "filter": {
+                    "name": "branches",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'branches'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=branches",
+                    "--package=branches"
+                ],
+                "filter": {
+                    "name": "branches",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
